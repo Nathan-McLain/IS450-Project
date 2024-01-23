@@ -1,0 +1,327 @@
+Level 1: General Questions (Multiple Choice)
+
+
+Question 1: What is the primary purpose of a project charter in project management?
+
+A) Define project scope
+
+B) Approve project budget
+
+C) Assign project tasks
+
+D) Monitor project progress
+
+Correct Answer: *A
+
+
+
+Question 2: Define the term "work breakdown structure (WBS)" and explain its significance in project planning.
+
+ A) List of project team members
+
+ B) Hierarchical decomposition of project tasks
+
+ C) Project budget allocation
+
+ D)  Risk assessment matrix
+
+Correct Answer: *B
+
+
+
+
+Question 3: In project management, what is the triple constraint, and what are its three components?
+
+ A) Human Resources, Scope, Schedule
+
+ B) Quality, Communication, Stakeholders
+
+ C) Risk, Procurement, Integration
+
+ D) Scope, Time, Cost
+
+Correct Answer: *D
+
+
+
+Question 4: What is the purpose of a project manager in a project?
+
+A) Execute project tasks
+
+B) Create project documentation
+
+C) Manage project resources and risks
+
+D) Review project outcomes
+
+Correct Answer: *C
+
+
+Question 5: What is the significance of a stakeholder in project management?
+
+A) Provides funding for the project
+
+B) A person or group with an interest in the project
+
+C) Executes project tasks
+
+D) Monitors project timelines
+
+Correct Answer: *B
+
+
+Question 6: Define the term "critical path" in project scheduling.
+
+A) The longest path in the project network
+
+B) A path with the least number of tasks
+
+C) A path with low project risks
+
+D) The path with the most critical tasks
+
+Correct Answer: *A 
+
+
+Question 7: What is the purpose of a project kickoff meeting?
+
+A) Finalize project budget
+
+B) Celebrate project completion
+
+C) Introduce the project team and discuss project objectives
+
+D) Review project risks
+
+Correct Answer: *C
+
+
+Question 8: What does the term "RACI matrix" stand for in project management?
+
+A) Resource Allocation and Control Index
+
+B) Risk Assessment and Communication Interface
+
+C) Responsible, Accountable, Consulted, Informed
+
+D) Rapid Action and Coordination Instrument
+
+Correct Answer: *C
+
+
+Question 9: Define the concept of scope creep in project management.
+
+A) A sudden increase in project budget
+
+B) Unauthorized changes or additions to project scope
+
+C) The project schedule falling behind
+
+D) Early completion of project tasks
+
+Correct Answer: *B
+
+
+Question 10: In project management, what is the purpose of a lessons learned session?
+
+A) Assessing project risks
+
+B) Documenting successes and failures for future projects
+
+C) Assigning blame for project issues
+
+D) Creating a project charter
+
+Correct Answer: *B
+
+
+Question 11: What is the primary purpose of a project schedule in project management?
+
+A) To allocate project resources
+
+B) To define the project scope
+
+C) To document project risks
+
+D) To plan and organize project activities over time
+
+Correct Answer: *D
+
+
+Question 12: Define the term "project scope" and explain its importance in project management.
+
+A) The duration of the project
+
+B) The budget allocated for the project
+
+C) The work that needs to be accomplished to deliver a product, service, or result
+
+D) The project team members' roles and responsibilities
+
+Correct Answer: *C
+
+
+Question 13: What is the purpose of a project kick-off meeting?
+
+A) To celebrate project completion
+
+B) To introduce the project team and discuss project objectives
+
+C) To finalize the project budget
+
+D) To review project risks
+
+Correct Answer: *B
+
+
+Question 14: In project management, what is the role of a project sponsor?
+
+A) To execute project tasks
+
+B) To create project documentation
+
+C) To provide funding and support for the project
+
+D) To monitor project timelines
+
+Correct Answer: *C
+
+
+Question 15: Explain the concept of a work breakdown structure (WBS) and its benefits in project planning.
+
+A) A hierarchical decomposition of the total scope of work to be carried out by the project team
+
+B) A list of project team members and their roles
+
+C) A summary of project risks and issues
+
+D) A detailed schedule of project activities
+
+Correct Answer: *A
+
+
+Question 16: What is the purpose of a project charter in project management?
+
+A) To assign project tasks
+
+B) To approve project budget
+
+C) To define project scope and objectives
+
+D) To create project documentation
+
+Correct Answer: *C
+
+
+Question 17: Define the term "stakeholder" in the context of project management.
+
+A) Project team members
+
+B) Individuals or groups with an interest in the project
+
+C) Project risks and uncertainties
+
+D) Project communication channels
+
+Correct Answer: *B
+
+
+Question 18: What is the significance of the triple constraint in project management?
+
+A) It defines project team roles
+
+B) It establishes project communication plans
+
+C) It represents the interdependence of scope, time, and cost in a project
+
+D) It determines project quality standards
+
+Correct Answer: *C
+
+
+Question 19: In project management, what does the term "project life cycle" refer to?
+
+A) The duration of the project
+
+B) The various phases a project goes through from initiation to closure
+
+C) The project budget and financial resources
+
+D) The skills and expertise of the project team
+
+Correct Answer: *B
+
+
+Question 20: Explain the concept of risk management in project management and why it is important.
+
+A) The process of avoiding all project risks
+
+B) The identification, assessment, and control of potential project risks
+
+C) The selection of project team members
+
+D) The development of project schedules
+
+Correct Answer: *B
+
+Level 1: General Questions (Fill in the Blank)
+
+Question 1: The project ________ is a document that formally authorizes the existence of a project, providing the project manager with the authority to apply organizational resources to project activities.
+
+Answer: charter
+
+Question 2: A ________ is a person or group who may affect, be affected by, or perceive itself to be affected by a decision, activity, or outcome of a project.
+
+Answer: stakeholder
+
+Question 3: The ________ is a hierarchical decomposition of the total scope of work to be carried out by the project team.
+
+Answer: Work Breakdown Structure (WBS)
+
+Question 4: The ________ is a sequence of activities that represents the longest path through a project, determining the shortest possible duration.
+
+Answer: critical path
+
+Question 5: The ________ is a tool used in risk management to evaluate and prioritize risks based on their probability and impact.
+
+Answer: risk matrix
+
+Question 6: The project ________ is a plan that documents how the project scope will be defined, validated, and controlled.
+
+Answer: Scope Management Plan
+
+Question 7: The project manager's role is to achieve project ________ within the project constraints.
+
+Answer: objectives
+
+Question 8: The triple constraint in project management consists of scope, ________, and cost.
+
+Answer: time
+
+Question 9: A project ________ is a temporary endeavor undertaken to create a unique product, service, or result.
+
+Answer: project
+
+Question 10: The Control ________ process involves monitoring and controlling the processes related to project scope, schedule, and cost.
+
+Answer: Scope
+
+Question 11: A project ________ is a document that formally recognizes and documents changes to the project scope, schedule, or costs.
+
+Answer: change request
+
+Question 12: The project manager is responsible for identifying, analyzing, and managing project ________ throughout the project lifecycle.
+
+Answer: risks
+
+Question 13: The project ________ defines how project communications will be planned, executed, and monitored.
+
+Answer: communications management plan
+
+Question 14: The term ________ refers to the process of obtaining the necessary approvals to bring the project to an orderly close.
+
+Answer: project closure
+
+Question 15: Project stakeholders with high ________ and low ________ should be closely monitored and engaged.
+
+Answer: power, interest

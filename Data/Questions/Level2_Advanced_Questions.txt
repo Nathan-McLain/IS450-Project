@@ -1,0 +1,195 @@
+Level 2: Advanced Questions (Multiple Choice)
+
+
+Question 1: Explain the concept of earned value management (EVM) in project management.
+
+A) A method to calculate project costs based on actual work performed
+
+B) A technique for scheduling tasks with minimum float
+
+C) A risk assessment model for complex projects
+
+D) A method to evaluate stakeholder satisfaction
+
+Correct Answer: *A
+
+
+Question 2: What is the purpose of a Monte Carlo analysis in project risk management?
+
+A) Evaluate project team performance
+
+B) Simulate project schedule and cost uncertainties
+
+C) Analyze project stakeholder communication
+
+D) Assess project quality metrics
+
+Correct Answer: *B
+
+
+Question 3: Describe the concept of agile project management and its key principles.
+
+A) A traditional, plan-driven approach to project management
+
+B) A flexible and iterative approach, focusing on customer collaboration
+
+C) A method to fast-track project schedules
+
+D) An approach that eliminates the need for project documentation
+
+Correct Answer: *B
+
+
+Question 4: What is a project baseline, and why is it important in project management?
+
+A) A snapshot of the project's current status; crucial for performance evaluation
+
+B) A record of all project changes; essential for audit purposes
+
+C) The original project plan; serves as a reference point for project control
+
+D) A summary of project risks; vital for risk mitigation
+
+Correct Answer: *C
+
+
+Question 5: Explain the concept of "float" in project scheduling and its implications.
+
+A) The time available for a task to be delayed without delaying the project
+
+B) The total duration of a project
+
+C) The number of tasks that can be completed in parallel
+
+D) The time buffer allocated for unforeseen project risks
+
+Correct Answer: A
+
+
+Question 6: What is the purpose of a risk register in project risk management?
+
+A) Documenting project team performance
+
+B) Identifying and tracking project risks
+
+C) Evaluating stakeholder satisfaction
+
+D) Creating a project budget
+
+Correct Answer: *B
+
+
+Question 7: Explain the concept of the Delphi technique in project estimation.
+
+A) A technique for risk identification
+
+B) A method for reaching consensus among experts anonymously
+
+C) A tool for analyzing project communication
+
+D) A strategy for managing project stakeholders
+
+Correct Answer: *B
+
+
+Question 8: Define the term "PERT" in project management and its application.
+
+A) Project Evaluation and Review Technique; used for activity duration estimation
+
+B) Project Execution and Reporting Tool; used for project progress tracking
+
+C) Program Evaluation and Risk Tracking; used for budget allocation
+
+D) Project Efficiency and Resource Tracking; used for team performance evaluation
+
+Correct Answer: *A
+
+
+Question 9: In the context of project procurement management, what is the purpose of a statement of work (SOW)?
+
+A) Documenting project risks
+
+B) Defining the project scope and deliverables
+
+C) Evaluating stakeholder satisfaction
+
+D) Managing project team conflicts
+
+Correct Answer: *B
+
+
+Question 10: Describe the difference between qualitative and quantitative risk analysis in project management.
+
+A) Qualitative focuses on probability, while quantitative focuses on impact
+
+B) Qualitative involves numerical calculations, while quantitative is subjective
+
+C) Qualitative is used for known risks, while quantitative is used for unknown risks
+
+D) Qualitative is used in agile projects, while quantitative is used in traditional projects
+
+Correct Answer: *A
+
+
+
+Level 2: Advanced Questions (Fill in the Blank)
+
+Question 1: Earned Value Management (EVM) is a project management technique that integrates project scope, schedule, and costs to assess project ________.
+
+Answer: performance
+
+Question 2: The Monte Carlo analysis is a technique used in project risk management to simulate the impact of ________ and ________ uncertainties on project outcomes.
+
+Answer: schedule, cost
+
+Question 3: Agile project management emphasizes iterative development, frequent ________, and collaboration with ________ throughout the project.
+
+Answer: feedback, stakeholders
+
+Question 4: The purpose of a lessons learned session in project management is to capture and document both the ________ and ________ of the project for future reference.
+
+Answer: successes, challenges
+
+Question 5: The Risk ________ is a tool used in project risk management to identify and evaluate potential risks, their likelihood, and potential impacts.
+
+Answer: Register
+
+Question 6: In project management, the acronym RACI stands for Responsible, ________, Consulted, and Informed, defining roles and responsibilities within a project.
+
+Answer: Accountable
+
+Question 7: In earned schedule (ES), the concept of schedule efficiency measures how well the project is ________ to schedule.
+
+Answer: adhering
+
+Question 8: A PERT (Program Evaluation and Review Technique) chart is used in project management for ________ estimation of task durations.
+
+Answer: probabilistic
+
+Question 9: A procurement statement of work (SOW) is a document that describes the ________ and ________ of the products, services, or results to be procured.
+
+Answer: scope, objectives
+
+Question 10: In project management, the Delphi technique is a method used for expert ________ to reach a consensus anonymously.
+
+Answer: experts
+
+Question 11: The purpose of a risk register in project risk management is to track and monitor identified ________ throughout the project.
+
+Answer: risks
+
+Question 12: Agile project management principles include prioritizing customer ________, delivering small increments of value, and welcoming ________ changes.
+
+Answer: satisfaction, scope
+
+Question 13: The concept of agile project management emphasizes ________ and responding to change over following a predefined plan.
+
+Answer: flexibility
+
+Question 14: A project baseline consists of the original project ________, schedule baseline, and cost baseline, providing a reference point for project ________.
+
+Answer: scope, control
+
+Question 15: The concept of scope ________ refers to unauthorized changes or additions to the project scope, often leading to project issues.
+
+Answer: creep
