@@ -67,6 +67,8 @@ function BasicCard(props) {
         <Button onClick={() => { setShowAnswer(!showAnswer) }}>
           {showAnswer ? 'Hide Answer' : 'Show Answer'}
         </Button>
+      </CardActions>
+      <CardActions>
         <Button onClick={() => { props.setCardIndex(props.cardIndex - 1) }}>Prev Card</Button>
         <Button onClick={() => { props.setCardIndex(props.cardIndex + 1) }}>Next Card</Button>
       </CardActions>
@@ -76,6 +78,7 @@ function BasicCard(props) {
 
 function BasicCard2(props) {
   const { question, answer } = props.card || { options: [] };
+  const [showAnswer, setShowAnswer] = React.useState(false);
 
   return <>
     <Card sx={{ maxWidth: 650 }}>
@@ -85,9 +88,18 @@ function BasicCard2(props) {
         </div>
         {question}
         <div>
-          <strong>Correct Answer:</strong> {answer}
+        {showAnswer && (
+          <div>
+            <strong>Correct Answer:</strong> {answer}
+          </div>
+        )}
         </div>
       </CardContent>
+      <CardActions>
+        <Button onClick={() => { setShowAnswer(!showAnswer) }}>
+          {showAnswer ? 'Hide Answer' : 'Show Answer'}
+        </Button>
+      </CardActions>
       <CardActions>
         <Button onClick={() => { props.setCardIndex(props.cardIndex - 1) }}>Prev Card</Button>
         <Button onClick={() => { props.setCardIndex(props.cardIndex + 1) }}>Next Card</Button>
