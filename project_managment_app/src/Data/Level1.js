@@ -1,4 +1,5 @@
 // Data for Level 1 General Questions
+
  export const generalQuestions = [
     {
       id: 1,
@@ -223,31 +224,84 @@
   
   ];
   
+  // Level 1: General Questions - Fill in the Blank
+export const level1FillInTheBlank = [
+  {
+    id: 1,
+    question: 'The project ________ is a document that formally authorizes the existence of a project, providing the project manager with the authority to apply organizational resources to project activities.',
+    answer: 'charter',
+  },
+  {
+    id: 2,
+    question: 'A ________ is a person or group who may affect, be affected by, or perceive itself to be affected by a decision, activity, or outcome of a project.',
+    answer: 'stakeholder',
+  },
+  {
+    id: 3,
+    question: 'The ________ is a hierarchical decomposition of the total scope of work to be carried out by the project team.',
+    answer: 'Work Breakdown Structure (WBS)',
+  },
+  {
+    id: 4,
+    question: 'The ________ is a sequence of activities that represents the longest path through a project, determining the shortest possible duration.',
+    answer: 'critical path',
+  },
+  {
+    id: 5,
+    question: 'The ________ is a tool used in risk management to evaluate and prioritize risks based on their probability and impact.',
+    answer: 'risk matrix',
+  },
+  {
+    id: 6,
+    question: 'The project ________ is a plan that documents how the project scope will be defined, validated, and controlled.',
+    answer: 'Scope Management Plan',
+  },
+  {
+    id: 7,
+    question: 'The project manager\'s role is to achieve project ________ within the project constraints.',
+    answer: 'objectives',
+  },
+  {
+    id: 8,
+    question: 'The triple constraint in project management consists of scope, ________, and cost.',
+    answer: 'time',
+  },
+  {
+    id: 9,
+    question: 'A project ________ is a temporary endeavor undertaken to create a unique product, service, or result.',
+    answer: 'project',
+  },
+  {
+    id: 10,
+    question: 'The Control ________ process involves monitoring and controlling the processes related to project scope, schedule, and cost.',
+    answer: 'Scope',
+  },
+  {
+    id: 11,
+    question: 'A project ________ is a document that formally recognizes and documents changes to the project scope, schedule, or costs.',
+    answer: 'change request',
+  },
+  {
+    id: 12,
+    question: 'The project manager is responsible for identifying, analyzing, and managing project ________ throughout the project lifecycle.',
+    answer: 'risks',
+  },
+  {
+    id: 13,
+    question: 'The project ________ defines how project communications will be planned, executed, and monitored.',
+    answer: 'communications management plan',
+  },
+  {
+    id: 14,
+    question: 'The term ________ refers to the process of obtaining the necessary approvals to bring the project to an orderly close.',
+    answer: 'project closure',
+  },
+  {
+    id: 15,
+    question: 'Project stakeholders with high ________ and low ________ should be closely monitored and engaged.',
+    answer: 'power, interest',
+  },
+];
+
   
-  
-  // React component for displaying a single multiple-choice question
- export const MultipleChoiceQuestion = ({ questionData }) => (
-    <div>
-      <h3>{questionData.question}</h3>
-      <ul>
-        {questionData.options.map((option) => (
-          <li key={option.id}>
-            <label>
-              <input type="radio" name={`question_${questionData.id}`} value={option.id} />
-              {option.text}
-            </label>
-          </li>
-        ))}
-      </ul>
-      <p>Correct Answer: {questionData.correctAnswer}</p>
-    </div>
-  );
-  
-  // React component for displaying a list of multiple-choice questions
-  export const Level1Questions = ({ data }) => (
-    <div>
-      {data.map((question) => (
-        <MultipleChoiceQuestion key={question.id} questionData={question} />
-      ))}
-    </div>
-  );
+ 

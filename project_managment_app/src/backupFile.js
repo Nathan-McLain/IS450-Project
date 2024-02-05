@@ -97,7 +97,7 @@ function BasicCard2(props) {
 }
 
 
-//using for testing the arrays
+
 function AllCards() {
   return <>
     {
