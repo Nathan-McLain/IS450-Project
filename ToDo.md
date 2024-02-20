@@ -2,6 +2,7 @@
 TODO
 
 * Fix the spacing issue between the cards
+    - maybe use react router to display one card at a time and have the user choose the level of questions
 * fix the cards to that the all dont have the same index to go back and forth
 * Go through questions and change ones that arnt correct
 * finish converting new images to text 
