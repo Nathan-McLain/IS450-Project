@@ -9,44 +9,71 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 
 function App() {
-  const [cardIndex, setCardIndex] = React.useState(0)
   return (
     <>
-<CardLevel/> 
-
+      <CardLevel />
     </>
   );
 }
 
-
-
 function CardLevel() {
   const [currentLevel, setCurrentLevel] = React.useState('level1');
   const [cardIndex, setCardIndex] = React.useState(0);
+  const [showAnswer, setShowAnswer] = React.useState(false);
+  const [selectedOption, setSelectedOption] = React.useState(null); // New state for selected option
+  const [userAnswer, setUserAnswer] = React.useState(''); // New state for user's answer
 
   const handlePrevCard = () => {
     setCardIndex(Math.max(0, cardIndex - 1));
+    setShowAnswer(false);
+    setSelectedOption(null); // Reset selected option
+    setUserAnswer(''); // Reset user's answer when moving to the next card
   };
 
   const handleNextCard = () => {
-    const currentQuestions =
-      currentLevel === 'level1'
-        ? generalQuestions
-        : currentLevel === 'level2'
-        ? level2Questions
-        : level3Questions;
+    const currentQuestions = isFillInTheBlank(currentLevel)
+      ? getFillInTheBlankQuestions()
+      : getCurrentQuestions();
 
-    setCardIndex(Math.min(currentQuestions.length - 1, cardIndex + 1));
+    // Update the index to cycle back to the first card if the last card is reached
+    setCardIndex((cardIndex + 1) % currentQuestions.length);
+    setShowAnswer(false);
+    setSelectedOption(null); // Reset selected option
+    setUserAnswer(''); // Reset user's answer when moving to the next card
   };
 
   const handleSelectLevel = (level) => {
     setCurrentLevel(level);
     setCardIndex(0);
+    setSelectedOption(null);
+    setUserAnswer('');
+  };
+
+  const handleFillInTheBlank = () => {
+    setCurrentLevel(getFillInTheBlankLevel(currentLevel));
+    setCardIndex(0);
+    setSelectedOption(null);
+    setUserAnswer('');
+  };
+
+  const handleOptionChange = (id) => {
+    setSelectedOption(id);
+    setShowAnswer(false);
   };
 
   return (
     <>
-      <CardView card={getCurrentQuestions()[cardIndex]} />
+      {isFillInTheBlank(currentLevel) ? (
+        <FillInTheBlankCardView
+          card={getFillInTheBlankQuestions()[cardIndex]}
+          showAnswer={showAnswer}
+          setShowAnswer={setShowAnswer}
+          userAnswer={userAnswer}
+          setUserAnswer={setUserAnswer} // Pass the setUserAnswer function
+        />
+      ) : (
+        <CardView card={getCurrentQuestions()[cardIndex]} showAnswer={showAnswer} setShowAnswer={setShowAnswer} selectedOption={selectedOption} handleOptionChange={handleOptionChange} />
+      )}
       <CardActions>
         <Button onClick={handlePrevCard}>Prev Card</Button>
         <Button onClick={handleNextCard}>Next Card</Button>
@@ -55,6 +82,7 @@ function CardLevel() {
         <Button onClick={() => handleSelectLevel('level1')}>Level 1</Button>
         <Button onClick={() => handleSelectLevel('level2')}>Level 2</Button>
         <Button onClick={() => handleSelectLevel('level3')}>Level 3</Button>
+        <Button onClick={handleFillInTheBlank}>Fill in the Blank</Button>
       </div>
     </>
   );
@@ -63,26 +91,37 @@ function CardLevel() {
     return currentLevel === 'level1'
       ? generalQuestions
       : currentLevel === 'level2'
-      ? level2Questions
-      : level3Questions;
+        ? level2Questions
+        : level3Questions;
+  }
+
+  function getFillInTheBlankQuestions() {
+    const allFillInTheBlankQuestions = [
+      ...level1FillInTheBlank,
+      ...level2FillInTheBlank,
+      ...level3FillInTheBlank,
+    ];
+
+    return allFillInTheBlankQuestions;
+  }
+
+  function isFillInTheBlank(level) {
+    return level.toLowerCase().includes('fillintheblank');
+  }
+
+  function getFillInTheBlankLevel(level) {
+    return level + 'FillInTheBlank';
   }
 }
 
-function CardView({ card }) {
-  const { question, options, correctAnswer } = card || { options: [] };
-  const [selectedOption, setSelectedOption] = React.useState(null);
-  const [showAnswer, setShowAnswer] = React.useState(false);
 
-  const handleOptionChange = (id) => {
-    setSelectedOption(id);
-    setShowAnswer(false); // Reset showAnswer when selecting a new option
-  };
+
+function CardView({ card, showAnswer, setShowAnswer, selectedOption, handleOptionChange }) {
+  const { question, options, correctAnswer } = card || { options: [] };
 
   const handleCheckAnswer = () => {
     setShowAnswer(true);
   };
-
-  const selectedOptionObject = options.find((option) => option.id === selectedOption);
 
   return (
     <Card sx={{ maxWidth: 650 }}>
@@ -113,24 +152,54 @@ function CardView({ card }) {
           </Button>
         </CardActions>
         {showAnswer && (
-  <div>
-    {selectedOption === correctAnswer ? (
-      <strong>Correct Answer!</strong>
-    ) : (
-      <strong>Incorrect Answer. The correct answer is: {options.find(option => option.id === correctAnswer).text}</strong>
-    )}
-  </div>
-)}
-
+          <div>
+            {selectedOption === correctAnswer ? (
+              <strong>Correct Answer!</strong>
+            ) : (
+              <strong>Incorrect Answer. The correct answer is: {options.find(option => option.id === correctAnswer).text}</strong>
+            )}
+          </div>
+        )}
       </CardContent>
     </Card>
   );
 }
 
+function FillInTheBlankCardView({ card, showAnswer, setShowAnswer, userAnswer, setUserAnswer }) {
+  const { question, answer } = card || {};
 
+  const handleCheckAnswer = () => {
+    setShowAnswer(true);
+  };
 
-
-
+  return (
+    <Card sx={{ maxWidth: 650 }}>
+      <CardContent>
+        <div>
+          <strong>Question:</strong> {question}
+        </div>
+        <div>
+          <label>
+            <strong>Your Answer:</strong>
+            <input type="text" value={userAnswer} onChange={(e) => setUserAnswer(e.target.value)} />
+          </label>
+        </div>
+        <CardActions>
+          <Button onClick={handleCheckAnswer}>Check Answer</Button>
+        </CardActions>
+        {showAnswer && (
+          <div>
+            {userAnswer.toLowerCase() === answer.toLowerCase() ? (
+              <strong>Correct Answer!</strong>
+            ) : (
+              <strong>Incorrect Answer. The correct answer is: {answer}</strong>
+            )}
+          </div>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
 
 
 export default App;
