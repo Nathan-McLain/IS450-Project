@@ -6,7 +6,10 @@ import { level3Questions, level3FillInTheBlank } from './Data/Level3';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 
 function App() {
   return (
@@ -47,6 +50,7 @@ function CardLevel() {
     setCardIndex(0);
     setSelectedOption(null);
     setUserAnswer('');
+    setShowAnswer(false);
   };
 
   const handleFillInTheBlank = () => {
@@ -54,6 +58,7 @@ function CardLevel() {
     setCardIndex(0);
     setSelectedOption(null);
     setUserAnswer('');
+    setShowAnswer(false);
   };
 
   const handleOptionChange = (id) => {
@@ -63,27 +68,49 @@ function CardLevel() {
 
   return (
     <>
-      {isFillInTheBlank(currentLevel) ? (
-        <FillInTheBlankCardView
-          card={getFillInTheBlankQuestions()[cardIndex]}
-          showAnswer={showAnswer}
-          setShowAnswer={setShowAnswer}
-          userAnswer={userAnswer}
-          setUserAnswer={setUserAnswer} // Pass the setUserAnswer function
-        />
-      ) : (
-        <CardView card={getCurrentQuestions()[cardIndex]} showAnswer={showAnswer} setShowAnswer={setShowAnswer} selectedOption={selectedOption} handleOptionChange={handleOptionChange} />
-      )}
-      <CardActions>
-        <Button onClick={handlePrevCard}>Prev Card</Button>
-        <Button onClick={handleNextCard}>Next Card</Button>
-      </CardActions>
-      <div>
-        <Button onClick={() => handleSelectLevel('level1')}>Level 1</Button>
-        <Button onClick={() => handleSelectLevel('level2')}>Level 2</Button>
-        <Button onClick={() => handleSelectLevel('level3')}>Level 3</Button>
-        <Button onClick={handleFillInTheBlank}>Fill in the Blank</Button>
-      </div>
+      <Container maxWidth="md" style={{ minHeight: '100vh' }}>
+      <Grid container spacing={2} direction="column" justifyContent="center" alignItems="center">
+        <Grid item xs={12}>
+        <CardMedia
+        component="img"
+        sx={{ height: 300}}
+        image="/pm.jpg"
+        title="Project Managment photo"
+      />
+          {isFillInTheBlank(currentLevel) ? (
+            <FillInTheBlankCardView
+              card={getFillInTheBlankQuestions()[cardIndex]}
+              showAnswer={showAnswer}
+              setShowAnswer={setShowAnswer}
+              userAnswer={userAnswer}
+              setUserAnswer={setUserAnswer}
+            />
+          ) : (
+            <CardView
+              card={getCurrentQuestions()[cardIndex]}
+              showAnswer={showAnswer}
+              setShowAnswer={setShowAnswer}
+              selectedOption={selectedOption}
+              handleOptionChange={handleOptionChange}
+            />
+          )}
+        </Grid>
+        <Grid item xs={12} container justifyContent="center">
+          <CardActions>
+            <Button onClick={handlePrevCard}>Prev Card</Button>
+            <Button onClick={handleNextCard}>Next Card</Button>
+          </CardActions>
+        </Grid>
+        <Grid item xs={12} container justifyContent="center">
+          <div>
+            <Button onClick={() => handleSelectLevel('level1')}>Level 1</Button>
+            <Button onClick={() => handleSelectLevel('level2')}>Level 2</Button>
+            <Button onClick={() => handleSelectLevel('level3')}>Level 3</Button>
+            <Button onClick={handleFillInTheBlank}>Fill in the Blank</Button>
+          </div>
+        </Grid>
+      </Grid>
+    </Container>
     </>
   );
 
@@ -124,10 +151,10 @@ function CardView({ card, showAnswer, setShowAnswer, selectedOption, handleOptio
   };
 
   return (
-    <Card sx={{ maxWidth: 650 }}>
+    <Card style={{ width: 650, marginBottom: '10px' }}>
       <CardContent>
         {question}
-        <div>
+        <div style={{ marginTop: '20px' }}> 
           <strong>Options:</strong>
           <ul>
             {options.map((option) => (
@@ -146,13 +173,13 @@ function CardView({ card, showAnswer, setShowAnswer, selectedOption, handleOptio
             ))}
           </ul>
         </div>
-        <CardActions>
+        <CardActions sx={{ marginTop: '10px' }}>
           <Button onClick={handleCheckAnswer} disabled={!selectedOption}>
             Check Answer
           </Button>
         </CardActions>
         {showAnswer && (
-          <div>
+          <div sx={{ marginTop: '10px' }}>
             {selectedOption === correctAnswer ? (
               <strong>Correct Answer!</strong>
             ) : (
@@ -173,14 +200,14 @@ function FillInTheBlankCardView({ card, showAnswer, setShowAnswer, userAnswer, s
   };
 
   return (
-    <Card sx={{ maxWidth: 650 }}>
+    <Card sx={{ width: 650 }}>
       <CardContent>
-        <div>
+      <div style={{ marginTop: '20px' }}> 
           <strong>Question:</strong> {question}
         </div>
-        <div>
+        <div style={{ marginTop: '20px' }}>
           <label>
-            <strong>Your Answer:</strong>
+            <strong>Your Answer: </strong>
             <input type="text" value={userAnswer} onChange={(e) => setUserAnswer(e.target.value)} />
           </label>
         </div>
