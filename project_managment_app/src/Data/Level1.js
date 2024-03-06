@@ -234,12 +234,12 @@ export const level1FillInTheBlank = [
   {
     id: 2,
     question: 'A ________ is a person or group who may affect, be affected by, or perceive itself to be affected by a decision, activity, or outcome of a project.',
-    answer: 'stakeholder',
+    answer: 'stake holder',
   },
   {
     id: 3,
     question: 'The ________ is a hierarchical decomposition of the total scope of work to be carried out by the project team.',
-    answer: 'Work Breakdown Structure (WBS)',
+    answer: 'Work Breakdown Structure',
   },
   {
     id: 4,
@@ -299,7 +299,7 @@ export const level1FillInTheBlank = [
   {
     id: 15,
     question: 'Project stakeholders with high ________ and low ________ should be closely monitored and engaged.',
-    answer: 'power, interest',
+    answer: 'power interest',
   },
 ];
 
