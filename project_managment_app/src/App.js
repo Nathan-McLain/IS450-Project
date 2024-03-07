@@ -103,9 +103,9 @@ function CardLevel() {
           </Grid>
           <Grid item xs={12} container justifyContent="center">
             <div>
-              <Button variant='outlined' sx={{ color: 'green' }} onClick={() => handleSelectLevel('level1')}>Level 1</Button>
+              <Button variant='outlined' sx={{ color: 'green', marginRight: '8px'  }} onClick={() => handleSelectLevel('level1')}>Level 1</Button>
               <Button variant='outlined' sx={{ backgroundColor: 'yellow', color: 'black' }} onClick={() => handleSelectLevel('level2')}>Level 2</Button>
-              <Button variant='outlined' sx={{ color: 'red' }} onClick={() => handleSelectLevel('level3')}>Level 3</Button>
+              <Button variant='outlined' sx={{ color: 'red', marginLeft: '8px', marginRight: '8px'   }} onClick={() => handleSelectLevel('level3')}>Level 3</Button>
               <Button variant='outlined'  onClick={handleFillInTheBlank}>Fill in the Blank</Button>
             </div>
           </Grid>
@@ -150,6 +150,8 @@ function CardView({ card, showAnswer, setShowAnswer, selectedOption, handleOptio
     setShowAnswer(true);
   };
 
+  const isCorrect = selectedOption === correctAnswer;
+
   return (
     <Card style={{ width: 650, marginBottom: '10px' }}>
       <CardContent>
@@ -180,6 +182,11 @@ function CardView({ card, showAnswer, setShowAnswer, selectedOption, handleOptio
         </CardActions>
         {showAnswer && (
           <div sx={{ marginTop: '10px' }}>
+            <Button
+              sx={{ backgroundColor: isCorrect ? 'green' : 'red', color: 'white', marginLeft: '8px' }}
+            >
+              {isCorrect ? 'Correct!' : 'Incorrect!'}
+            </Button>
             {selectedOption === correctAnswer ? (
               <strong>Correct Answer!</strong>
             ) : (
