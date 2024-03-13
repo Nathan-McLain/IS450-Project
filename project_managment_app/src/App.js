@@ -150,8 +150,6 @@ function CardView({ card, showAnswer, setShowAnswer, selectedOption, handleOptio
     setShowAnswer(true);
   };
 
-  const isCorrect = selectedOption === correctAnswer;
-
   return (
     <Card style={{ width: 650, marginBottom: '10px' }}>
       <CardContent>
@@ -175,6 +173,7 @@ function CardView({ card, showAnswer, setShowAnswer, selectedOption, handleOptio
             ))}
           </ul>
         </div>
+        
         <CardActions sx={{ marginTop: '10px' }}>
           <Button variant='outlined' onClick={handleCheckAnswer} disabled={!selectedOption}>
             Check Answer
@@ -225,6 +224,7 @@ function FillInTheBlankCardView({ card, showAnswer, setShowAnswer, userAnswer, s
             )}
           </div>
         )}
+        
       </CardContent>
     </Card>
   );
